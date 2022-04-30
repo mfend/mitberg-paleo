@@ -1,5 +1,6 @@
 All iceberg output files are stored in Python Pickles, grouped by seasonal
-output and iceberg size class. Files can be opened as follows (in Python):
+output and iceberg size class. After unzipping, files can be opened as follows
+(in Python):
 
 -------
 
