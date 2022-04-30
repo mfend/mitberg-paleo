@@ -1,0 +1,20 @@
+All iceberg output files are stored in Python Pickles, grouped by seasonal
+output and iceberg size class. Files can be opened as follows (in Python):
+
+-------
+
+import pickle as pkl
+
+fili = open('seasonal-djf-small.pkl','rb')
+data = pickle.load(fili)
+
+x = data[0]         # longitude grid
+y = data[1]         # latitude grid
+icebergs = data[2]  # number of icebergs that visited the cell (in season)
+
+--------
+
+
+Data can then be plotted and manipulated. To view data for the full simulation
+(i.e. as seen in Figures 1, 2, 3), simply load all four seasons and sum the
+fields.
